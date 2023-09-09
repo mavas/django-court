@@ -1,2 +1,3 @@
-# django-court-system-application
+# django-court
+
 A Django-based court system
