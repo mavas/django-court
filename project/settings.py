@@ -50,7 +50,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'court.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 
 DATABASES = {
