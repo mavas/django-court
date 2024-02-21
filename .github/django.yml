@@ -33,4 +33,4 @@ jobs:
         DJANGO_ALLOWED_HOSTS: localhost 127.0.0.1 [::1]
         DEBUG: False
       run: |
-        python ./manage.py test
+        python ./manage.py test app
