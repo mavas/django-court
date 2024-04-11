@@ -9,7 +9,7 @@ class Basic(TestCase):
 class Lei(TestCase):
     def test_request(self):
         import requests
-        response = requests.get('www.yahoo.com')
+        response = requests.get('https://www.yahoo.com')
         self.assertEquals(response.ok, 200)
         print("Len: %s" % dir(response))
 
