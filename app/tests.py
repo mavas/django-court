@@ -13,3 +13,4 @@ class Lei(TestCase):
         import os
         print(os.path.abspath(os.curdir))
         print(RESOURCE_DIR)
+        print(os.listdir(RESOURCE_DIR))
