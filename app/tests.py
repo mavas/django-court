@@ -9,3 +9,6 @@ class Basic(TestCase):
 class Lei(TestCase):
     def test_basic(self):
         from python_lei.utils import Download
+        #Download()
+        import os
+        print(os.path.abspath(os.curdir))
