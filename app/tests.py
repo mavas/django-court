@@ -10,8 +10,8 @@ class Lei(TestCase):
     def test_request(self):
         import requests
         response = requests.get('https://www.yahoo.com')
-        self.assertEquals(response.ok, 200)
         print("Len: %s" % dir(response))
+        self.assertEquals(response.ok, True)
 
     def test_basic(self):
         from python_lei.utils import Download, RESOURCE_DIR
