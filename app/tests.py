@@ -7,6 +7,12 @@ class Basic(TestCase):
         self.assertEquals(response.status_code, 404)
 
 class Lei(TestCase):
+    def test_request(self):
+        import requests
+        response = requests.get('www.yahoo.com')
+        self.assertEquals(response.ok, 200)
+        print("Len: %s" % dir(response))
+
     def test_basic(self):
         from python_lei.utils import Download, RESOURCE_DIR
         print("Doing the download..")
