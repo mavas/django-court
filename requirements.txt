@@ -1,3 +1,4 @@
 django==4.2.5
 
 python-lei @ git+https://github.com/mavas/python-lei@feature/misc
+beautifulsoup4

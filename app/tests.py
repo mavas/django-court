@@ -8,21 +8,29 @@ class Basic(TestCase):
 
 class Lei(TestCase):
     def test_request(self):
+        """
+        Just verifies that the 'requests' library works.  It probbably does, so
+        maybe delete this test
+        """
         import requests
         response = requests.get('https://www.yahoo.com')
         print("Len: %s" % dir(response))
         self.assertEquals(response.ok, True)
 
-    def test_basic(self):
+    def test_download(self):
         from python_lei.utils import Download, RESOURCE_DIR
-        print("Doing the download..")
         import zipfile
+        import os
+        directory_listing = os.listdir(RESOURCE_DIR)
+        self.assertEquals(len(directory_listing), 0)
+        print("Doing the download..")
         try:
             Download()
         except zipfile.BadZipFile as e:
             print("Got the error: %s" % e)
+            raise Exception(e)
         print("Done with the download")
-        import os
         print(os.path.abspath(os.curdir))
         print(RESOURCE_DIR)
-        print(os.listdir(RESOURCE_DIR))
+        directory_listing = os.listdir(RESOURCE_DIR)
+        self.assertEquals(len(directory_listing), 1)
